@@ -10,25 +10,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
+ 
 </head>
 
-    <body>
+<body>
 
   <h1>Rahan Mohammed speed check</h1>
   <br>
   <div id="target">Your time</div>
   <div id="counter">Count</div>
   <button type="button"  onclick="startTime()" style="color: black;"><b>Start Timer</b></button>
-  <button type="button" onclick="recordTime()"><b>React</b></button>
+  <button type="button"  onclick="recordTime()"><b>React</b></button>
   <script>
     let reactTime = undefined;
     function recordTime() {
       reactTime = Date.now();
       console.log(reactTime);
     }
-
     function startTime() {
+      
       let countdown = Math.floor(Math.random() * 9) + 2
       for (let i = 0; i < 9; i++) {
         setTimeout(() => {
@@ -46,7 +46,6 @@
         }
       }, 8000)
     }
-    
   </script>
 
 </body>
