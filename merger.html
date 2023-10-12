@@ -37,6 +37,7 @@
 		<button onclick="addEnd()">Add End</button>
         <button onclick="addFront()">Add Front</button>
         <button onclick="remove()">Remove</button>
+        <button type="button" class="btn btn-success" onclick="swap()">Swap</button>
         <script>
             function addEnd(){  
                 /* make the div and its text */
@@ -66,6 +67,14 @@
               let container = document.getElementById("target");
               container.insertBefore(element, container.firstChild);
             }
+            function swap(){
+                let mergerItems = document.getElementsByClassName("merger");
+                let length = mergerItems.length;
+                let mergerItem = document.getElementsByClassName("merger")[Math.floor(Math.random() * length)];
+                let container = document.getElementById("target");
+                container.insertBefore(mergerItem, container.firstChild);
+
+    }
         </script>
 </body>
 </html>	

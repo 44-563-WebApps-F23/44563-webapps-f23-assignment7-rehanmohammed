@@ -127,8 +127,9 @@
     let checkCount = 0
     let penalty = 0
     let lastCheck = 0
-    let treasureLocation =5
-    let trapLocation = 18
+    let treasureLocation = Math.floor(Math.random() * 25);
+    let trapLocation = Math.floor(Math.random() * 25);
+
     let gameOver = false
     function check(position){
         if(!gameOver){
@@ -187,6 +188,30 @@
             document.getElementById("penalty").innerHTML = "Penalty is " + penalty + ".";
             document.getElementById("help").innerHTML = res;
         }
+
+        
+function newgame() {
+
+treasureLocation = Math.floor(Math.random() * 25);
+
+trapLocation = Math.floor(Math.random() * 25);
+
+checkCount = 0
+
+penalty = 0
+
+document.getElementById("locations").innerHTML = "Number of locations checked is zero";
+
+document.getElementById("penalty").innerHTML = "Penalty is zero";
+
+for (let i = 0; i < 25; i++) {
+
+    document.getElementById(ids[i]).src = "Treasure hunt.jpg";
+
+}
+
+}
+
     </script>
 
 </body>
