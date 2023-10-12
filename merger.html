@@ -37,6 +37,38 @@
 		<button onclick="addEnd()">Add End</button>
         <button onclick="addFront()">Add Front</button>
         <button onclick="remove()">Remove</button>
+
+        <script>
+            function addEnd(){  
+                /* make the div and its text */
+                let element = document.createElement("div")        
+                element.innerHTML = document.getElementById("inputElement").value
+                element.style.color = "orange"
+                element.className = "merger"
+        
+                /* add it to the container */
+                let container = document.getElementById('target')
+                container.appendChild(element)
+                
+            }
+            function remove(){
+                let queueItems = document.getElementsByClassName("merger")
+                let len_ele = queueItems.length
+                if(len_ele > 0){
+                    queueItems[len_ele-1].remove()
+                }
+            }
+            function addFront() {
+              let element = document.createElement("div");
+              element.innerHTML = document.getElementById("inputElement").value;
+              element.style.color = "orange";
+              element.className = "merger";
+        
+              let container = document.getElementById("target");
+              container.insertBefore(element, container.firstChild);
+            }
+        </script>
+        
 	
 	
 </body>
